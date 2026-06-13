@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/pilotai.setup.exe",
+      "destination": "/api/download"
+    },
+    {
+      "source": "/pull",
+      "destination": "/api/pull"
+    },
+    {
+      "source": "/send",
+      "destination": "/api/send"
+    }
+  ]
+}
