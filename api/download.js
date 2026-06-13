@@ -1,12 +1,22 @@
+import https from 'https';
+
 export default function handler(req, res) {
-  const host = req.headers.host; // Gelen isteğin domain adresi
-  const megaLink = "https://mega.nz/file/ku5iibiJ#r7fnVCvhuyJHkyKvYOBqqFmJA-Hw9sxqg5dVNktQUbE";
+  // MEGA'nın doğrudan dosya çekme (Stream) servisleri için proxy mantığı kuruyoruz.
+  // Kullanıcının tarayıcısına "Bu bir indirme dosyasıdır" komutu gönderiyoruz:
+  res.setHeader('Content-Disposition', 'attachment; filename="pilotai.setup.exe"');
+  res.setHeader('Content-Type', 'application/octet-stream');
 
-  // Eğer istek tam olarak senin belirttiğin download alt domaininden geldiyse
-  if (host === "download.pulldata.duckdns.org") {
-    return res.redirect(302, megaLink);
-  }
+  // Senin MEGA linkinin arkadaki ham indirme sunucusuna bağlanması için 
+  // MEGA linkini doğrudan bir stream akışına çevirmemiz gerekir.
+  // NOT: Eğer MEGA izin vermezse, bu exe dosyasını GitHub deponun içine direkt atıp 
+  // ya da GitHub Release kısmına yükleyip linki aşağıya yazarsan %100 kusursuz akar!
+  
+  const fileUrl = "https://mega.nz/file/ku5iibiJ#r7fnVCvhuyJHkyKvYOBqqFmJA-Hw9sxqg5dVNktQUbE";
 
-  // Eğer normal pulldata.duckdns.org üzerinden geldiyse ana sayfaya ya da apiye yönlendirsin
-  res.status(200).json({ message: "Pulldata API Merkezine Hoş Geldiniz!" });
+  // Dosyayı arkada indirip kullanıcıya kayıpsız iletiyoruz
+  https.get(fileUrl, (stream) => {
+    stream.pipe(res);
+  }).on('error', (err) => {
+    res.status(500).send("Download error: " + err.message);
+  });
 }
