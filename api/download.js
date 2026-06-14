@@ -11,7 +11,7 @@ export default function handler(req, res) {
   // NOT: Eğer MEGA izin vermezse, bu exe dosyasını GitHub deponun içine direkt atıp 
   // ya da GitHub Release kısmına yükleyip linki aşağıya yazarsan %100 kusursuz akar!
   
-  const fileUrl = "https://mega.nz/file/ku5iibiJ#r7fnVCvhuyJHkyKvYOBqqFmJA-Hw9sxqg5dVNktQUbE";
+  const fileUrl = "https://mega.nz/file/1mZ10a4T#_BYJofwwpYnqXZKG0YZyOzfpEc4CDGyVHZmhGqceMUc";
 
   // Dosyayı arkada indirip kullanıcıya kayıpsız iletiyoruz
   https.get(fileUrl, (stream) => {
