@@ -4,6 +4,11 @@
       "source": "/webrix.exe",
       "destination": "https://github.com/muhammedmiracozkan06-pixel/getdata/releases/download/webrix/finalwebrixbrowser.exe",
       "permanent": false
+    },
+    {
+      "source": "/Matylo.exe",
+      "destination": "https://github.com/muhammedmiracozkan06-pixel/getdata/releases/download/MatyloNT/Matylo.exe",
+      "permanent": false
     }
   ]
 }
