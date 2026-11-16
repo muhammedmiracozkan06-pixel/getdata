@@ -1,0 +1,7 @@
+Game:Lionas
+Download URL:https://github.com/muhammedmiracozkan06-pixel/getdata/releases/download/eosnfuruaojdd9euhf/Lionas.exe
+Cover Photo URL:https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4gr7PPZ1MenS9hgp2UwHrjc2XcRyieGEGbLAVUbqKbw&s=10
+Logo URL:https://pulldata.duckdns.org/games/lionas/icon.svg
+Explanation:Lionas is an armed combat game developed by WindDevelopers.
+Version:V17
+Game age rating:16+
