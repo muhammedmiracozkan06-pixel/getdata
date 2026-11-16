@@ -5,3 +5,11 @@ Logo URL:https://pulldata.duckdns.org/games/lionas/icon.svg
 Explanation:Lionas is an armed combat game developed by WindDevelopers.
 Version:V17
 Game age rating:16+
+*
+Game:Luanti(Old Name:Minetest=
+Download URL:https://github.com/luanti-org/luanti/releases/download/5.18.0/luanti-5.18.0-win64.zip
+Cover Photo URL:https://www.luanti.org/media/icon.svg
+Logo URL:https://www.luanti.org/media/icon.svg
+Explanation:Luanti is an open-source sandbox application.
+Version:5.18.0
+Game age rating: 13+ (ESRB) Pan European Game Information:3
